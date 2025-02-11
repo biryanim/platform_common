@@ -24,7 +24,7 @@ func (v *ValidateErrors) Error() string {
 	return string(data)
 }
 
-func IsValidateError(err error) bool {
+func IsValidationError(err error) bool {
 	var ve *ValidateErrors
 	return errors.As(err, &ve)
 }
