@@ -27,7 +27,7 @@ func IsCommonError(err error) bool {
 	return errors.As(err, &ce)
 }
 
-func GetCommonError(err error) error {
+func GetCommonError(err error) *commonError {
 	var ce *commonError
 	if !errors.As(err, &ce) {
 		return nil
